@@ -1,5 +1,3 @@
-//stock¿‡
-
 #include<iostream>
 #include<string>
 using namespace std;
@@ -61,12 +59,32 @@ void stock::show()const
 		<< " share number:" << sh_num <<
 		" total value:" << tot_val << endl;
 }
+const stock& stock::topval(const stock& s)const
+{
+	if (this->tot_val < s.tot_val)
+		return s;
+	else
+	{
+		return *this;
+	}
+
+}
 
 int main()
 {
+	const int STK = 6;
 
-
-	stock st1;
-	st1.show();
-
+	stock st[STK]={stock("shiyou",22.3,100),stock(),stock("shihua",24.4,120),stock("haiyou",20.1,200)};
+	for (int i = 0; i < STK; i++)
+	{
+		st[i].show();
+	}
+	const stock* pst = &st[0];
+	for (int i = 1; i < STK; i++)
+	{
+		pst = &pst->topval(st[i]);
+	}
+	cout << "most valuable holding:" << endl;
+	pst->show();
+	return 0;
 }

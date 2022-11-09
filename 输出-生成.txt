@@ -1,0 +1,5 @@
+﻿已启动生成...
+1>------ 已启动生成: 项目: usestock, 配置: Debug x64 ------
+1>usestock.cpp
+1>usestock.vcxproj -> C:\Users\Lenovo\source\repos\pingpingwang168989\usestock\x64\Debug\usestock.exe
+========== “生成”: 1 成功，0 失败，0 更新，0 已跳过 ==========
